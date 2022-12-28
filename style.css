@@ -1,0 +1,33 @@
+/* ----------------------
+    VARIABLES & RESET 
+-----------------------*/
+
+:root {
+   --blue-500: #0065fc;
+   --greyblue-100: #deebff;
+   --lightgrey-100: #d9d9d9;
+   --backgrey: #f2f2f2; /* 2 Colors listed for BG, one on template, one in note */
+   --font: 'Raleway', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+body {
+   font-family: var(--font);
+   margin: 0;
+   max-width: 1440px;
+}
+
+/* ----------------------
+         HEADER 
+-----------------------*/
+/* ----------------------
+          MAIN 
+-----------------------*/
+/* ----------------------
+         FOOTER 
+-----------------------*/
