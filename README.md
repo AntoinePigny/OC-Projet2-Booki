@@ -1,13 +1,13 @@
 # Projet OpenClassroom n°2 : Créez la page d'accueil d'une agence de voyage avec HTML & CSS
 
-##Objectifs du projet
+## Objectifs du projet
 
 -  Installer un environnement de développement front-end
 -  Implémenter une interface responsive avec HTML et CSS
 -  Intégrer du contenu conformément à une maquette avec HTML et CSS
 -  Versionner son projet avec Git et Github
 
-##Contraintes & Régles
+## Contraintes & Régles
 
 -  Aucun langage autre que HTML & CSS
 -  Aucun framework CSS
@@ -16,7 +16,7 @@
 -  Utilisation de sections et balise **sémantiques** et **privilégier les classes CSS** lors du ciblage d'un élément
 -  Desktop first
 
-##Ressources
+## Ressources
 
 -  Police : [Raleway](https://fonts.google.com/specimen/Raleway)
 -  Icones : [Font Awesome](https://fontawesome.com/) (via cdn sur ce projet)
