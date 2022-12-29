@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
    <head>
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,14 +10,14 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
-      <link rel="stylesheet" href="style.css" />
+      <link rel="stylesheet" href="./style.css" />
       <link rel="icon" href="img/favicon.ico" />
    </head>
    <body>
       <header>
          <nav>
             <div class="home">
-               <a href=""><img src="./img/Booki.png" alt="Booki" /></a>
+               <a href=""><img src="./img/Booki.png" alt="Logo Booki" /></a>
             </div>
             <div class="navbar">
                <ul>
@@ -29,10 +29,10 @@
       </header>
       <main>
          <section class="search-filters">
-            <h2>
+            <h1>
                Trouvez votre hébergement pour des vacances de rêve
                <span>En plein centre-ville ou en pleine nature</span>
-            </h2>
+            </h1>
             <form action="">
                <label>
                   <i class="fa-solid fa-location-dot"></i><input type="text" placeholder="Marseille, France" />
@@ -43,7 +43,10 @@
                </button>
             </form>
          </section>
-         <section id="housing" class="housing"></section>
+         <section id="housing" class="housing">
+            <h2>Hébergements à Marseille</h2>
+            <!-- <div class="hotel-cards">a.hotel-card*6>div.card-image</div> -->
+         </section>
          <aside class="popular"></aside>
          <section id="activities" class="activities"></section>
       </main>
