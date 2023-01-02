@@ -32,6 +32,16 @@ ul {
    margin: 0;
 }
 
+section,
+aside {
+   padding: 2.5rem;
+}
+
+h2,
+h3 {
+   margin: 0;
+}
+
 .flex-container {
    margin: 0 auto;
    max-width: 1440px;
@@ -43,6 +53,72 @@ ul {
 /* ----------------------
           MAIN 
 -----------------------*/
+
+.housing {
+   background-color: var(--backgrey);
+   border-radius: 20px;
+}
+
+/* ---Cards Layout--- */
+
+.hotel-cards {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   margin: 2rem;
+}
+
+.housing .hotel-card,
+.activities .hotel-card {
+   height: 200px;
+}
+
+.housing .card-image {
+   height: 115px;
+}
+
+.card-image img {
+   object-fit: cover;
+   width: 100%;
+   height: 100%;
+}
+
+.hotel-card {
+   background-color: #fff;
+   border-radius: 20px;
+   display: flex;
+   padding: 5px;
+   flex-direction: column;
+   width: 100%;
+}
+.housing .hotel-card {
+   width: 15.375rem;
+   margin: 2rem auto 0;
+}
+.housing .card-image img {
+   border-radius: 16px 16px 0 0;
+}
+
+.housing .card-content {
+   display: flex;
+   flex-direction: column;
+   padding: 9px 0.5rem;
+}
+
+.card-content p,
+.card-content strong {
+   margin: 0 0 4px;
+}
+
+.card-content div {
+   line-height: 0;
+   margin: 4px 0 0;
+}
+
+.hotel-card i {
+   font-size: 0.75rem;
+}
+
 /* ----------------------
          FOOTER 
 -----------------------*/
