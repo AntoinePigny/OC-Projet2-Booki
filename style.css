@@ -55,6 +55,14 @@ h3 {
    max-width: 1440px;
 }
 
+@media screen and (width < 768px) {
+   section,
+   aside,
+   footer {
+      padding: 2rem 1.5rem;
+   }
+}
+
 /* ----------------------
          HEADER 
 -----------------------*/
@@ -108,11 +116,61 @@ nav {
    height: 2px;
 }
 
+@media screen and (width < 768px) {
+   nav {
+      align-items: center;
+      justify-content: center;
+      flex: 100%;
+   }
+
+   .home {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+   }
+
+   .logo {
+      display: block;
+   }
+
+   .navbar {
+      flex: 1;
+   }
+
+   .navbar-item {
+      flex: 1;
+   }
+
+   .navbar-item a {
+      flex: 1;
+      justify-content: center;
+      padding: 1rem 0;
+   }
+
+   .navbar-item a::after {
+      background-color: var(--backgrey);
+      bottom: 0;
+      height: 3px;
+      left: 0;
+      right: 0;
+      content: '';
+      position: absolute;
+   }
+
+   .navbar-item a:hover::after {
+      background-color: var(--blue-500);
+      bottom: 0;
+      top: auto;
+      height: 3px;
+   }
+}
+
 /* ----------------------
           MAIN 
 -----------------------*/
 .flex-container {
    display: flex;
+   gap: 2.5rem;
    flex-wrap: wrap;
    justify-content: space-between;
 }
@@ -131,12 +189,11 @@ nav {
 .popular {
    max-width: 420px;
    height: 100%;
-   margin-left: 2.5rem;
 }
 
 .activities {
    width: 100%;
-   padding: 3.75rem 0;
+   padding-bottom: 3.75rem;
 }
 .title {
    display: flex;
@@ -158,7 +215,8 @@ h1 span {
 }
 
 .search-filters {
-   padding: 1.25rem 0 2.5rem;
+   padding-top: 1.25rem;
+   padding-bottom: 2.5rem;
 }
 
 .search-form {
@@ -216,6 +274,16 @@ button {
    display: none;
 }
 
+@media screen and (width < 768px) {
+   .search-form button span {
+      display: none;
+   }
+
+   .search-form button i {
+      display: inline;
+   }
+}
+
 /* ----Filters---- */
 
 .filters {
@@ -229,6 +297,7 @@ button {
 }
 
 .filters-list {
+   gap: 2rem;
    display: flex;
    flex-wrap: wrap;
    justify-content: space-between;
@@ -241,11 +310,7 @@ button {
    border: 2px solid var(--backgrey);
    border-radius: 1.5rem;
    height: 3rem;
-   margin: 0.75rem 2rem 0 0;
-}
-
-.filters-list-item:last-of-type {
-   margin-right: 0;
+   margin-top: 0.75rem;
 }
 
 .filters-list-item i,
@@ -270,7 +335,7 @@ button {
 .information {
    display: flex;
    align-items: baseline;
-   font-size: 0.75rem;
+   font-size: 1rem;
    margin-top: 2.5rem;
 }
 
@@ -287,13 +352,42 @@ button {
 .information p {
    margin: 0 0 0 0.5rem;
 }
+
+@media screen and (width < 992px) {
+   .filters h3 {
+      margin: 1rem 1rem 1rem 0;
+   }
+
+   .filters-list {
+      gap: 1.5rem;
+   }
+}
+
+@media screen and (width < 768px) {
+   .filters-list {
+      gap: 1rem;
+   }
+
+   .filters-list span {
+      font-size: 0.75rem;
+   }
+
+   .filters-list-item {
+      flex: 1;
+      margin: 0;
+   }
+}
 /* ---Cards Layout--- */
 
 .hotel-cards {
    display: flex;
    flex-wrap: wrap;
    justify-content: space-between;
-   margin: 2rem;
+}
+
+.housing .hotel-cards {
+   row-gap: 1.875rem;
+   padding: 1.5rem 0 2.5rem;
 }
 
 .popular .hotel-cards {
@@ -325,7 +419,7 @@ button {
 .housing .hotel-card {
    height: 200px;
    width: 15.375rem;
-   margin: 2rem auto 0;
+   margin: 0 auto;
 }
 .popular .hotel-card {
    height: 8.75rem;
@@ -337,7 +431,6 @@ button {
 }
 .activities .hotel-card {
    flex: 1;
-
    margin-left: 2.5rem;
    padding: 0px;
    width: 25%;
@@ -359,6 +452,7 @@ button {
 
 .popular .card-image {
    width: 40%;
+   aspect-ratio: 4/3;
 }
 
 .activities .card-image {
@@ -399,6 +493,76 @@ button {
 .housing .card-content div {
    line-height: 0;
    margin: 4px 0 0;
+}
+
+@media screen and (768px < width < 992px) {
+   .housing,
+   .popular {
+      margin: 0 4.5rem;
+   }
+
+   .popular {
+      max-width: none;
+      width: 100%;
+   }
+
+   .popular .hotel-cards {
+      gap: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 0;
+   }
+
+   .popular .hotel-card {
+      flex: 1;
+   }
+
+   .housing {
+      flex-basis: 100%;
+   }
+
+   .activities {
+      padding-inline: 4.5rem;
+   }
+
+   .activities .hotel-card {
+      height: 267px;
+   }
+}
+
+@media screen and (width < 768px) {
+   .housing,
+   .popular {
+      width: 100%;
+      flex: auto;
+   }
+   .popular {
+      max-width: none;
+      order: -1;
+      border-radius: 0;
+   }
+
+   .housing {
+      background-color: #fff;
+   }
+
+   .housing .hotel-card {
+      width: 100%;
+   }
+
+   .activities .hotel-cards {
+      display: block;
+   }
+
+   .activities .hotel-card {
+      height: 200px;
+      width: 100%;
+      margin: 1.5rem 0 0 0;
+   }
+
+   .activities .hotel-card:first-of-type {
+      margin-top: 0;
+   }
 }
 
 /* ----------------------
