@@ -275,6 +275,14 @@ button {
 }
 
 @media screen and (width < 768px) {
+   .search-form {
+      max-width: 100%;
+   }
+
+   input {
+      max-width: 100%;
+   }
+
    .search-form button span {
       display: none;
    }
