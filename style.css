@@ -10,6 +10,10 @@
    --font: 'Raleway', sans-serif;
 }
 
+html {
+   scroll-behavior: smooth;
+}
+
 .blue {
    color: var(--blue-500);
 }
