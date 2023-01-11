@@ -27,6 +27,7 @@
 body {
    font-family: var(--font);
    margin: 0;
+   padding: 0 2.5rem;
 }
 
 a {
@@ -55,11 +56,17 @@ h3 {
    max-width: 1440px;
 }
 
-@media screen and (width < 768px) {
+@media screen and (width < 992px) {
    section,
    aside,
    footer {
       padding: 2rem 1.5rem;
+   }
+}
+
+@media screen and (width < 768px) {
+   body {
+      padding: 0;
    }
 }
 
@@ -193,6 +200,7 @@ nav {
 
 .activities {
    width: 100%;
+   padding-inline: 0;
    padding-bottom: 3.75rem;
 }
 .title {
@@ -337,7 +345,7 @@ button {
 
 .filters-list-item:hover {
    background-color: var(--greyblue-100);
-   cursor: default;
+   cursor: pointer;
 }
 
 .information {
@@ -476,7 +484,7 @@ button {
 }
 
 .card-content p,
-.card-content strong {
+.card-content h4 {
    margin: 0 0 4px;
 }
 
@@ -504,11 +512,6 @@ button {
 }
 
 @media screen and (768px < width < 992px) {
-   .housing,
-   .popular {
-      margin: 0 4.5rem;
-   }
-
    .popular {
       max-width: none;
       width: 100%;
@@ -527,10 +530,6 @@ button {
 
    .housing {
       flex-basis: 100%;
-   }
-
-   .activities {
-      padding-inline: 4.5rem;
    }
 
    .activities .hotel-card {
@@ -558,6 +557,10 @@ button {
       width: 100%;
    }
 
+   .activities {
+      padding-inline: 1.5rem;
+   }
+
    .activities .hotel-cards {
       display: block;
    }
@@ -574,7 +577,7 @@ button {
 }
 
 /* ----------------------
-         FOOTER 
+FOOTER 
 -----------------------*/
 
 footer .container {
